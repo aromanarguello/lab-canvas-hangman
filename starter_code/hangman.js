@@ -2,8 +2,8 @@ var hangman;
 
 function Hangman() {
 	this.words = ['cat', 'apple', 'bird'];
-	 this.secretWord = 'secretWord';
-	this.letters = "";
+	this.secretWord = 'secretWord';
+	this.letters = [];
 	// this.guessedLetter = "";
 	// this.errorsLeft = errorsLeft;
 }
@@ -22,15 +22,21 @@ Hangman.prototype._checkIfLetter = function(keyCode) {
 };
 
 Hangman.prototype._checkClickedLetters = function(key) {
-		// key returns  one letter in the string string
+		// 'key' represents a string letter: P F R N
+
+    // console.log(key);
+    // console.log(this.letters);
+    // console.log(this.letters === key);
+    //
+    if (this.letters === key) {
+      return true;
+    }
+    if (this.letters !== key) {
+      return false;
+    }
 
 
 
-		// if ( this.guessedLetter === key ) {
-		// 	return true;
-		// } else {
-		// 	return false;
-		// }
 
 
 };
