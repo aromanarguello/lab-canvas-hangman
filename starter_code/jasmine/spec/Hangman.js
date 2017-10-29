@@ -39,7 +39,7 @@ describe("Hangman Game", function () {
       var keyCode = 43;
       hangman._checkIfLetter(keyCode);
       expect(typeof(keyCode)).toBe("number");
-      
+
     });
 
     it("_checkIfLetter should return a boolean", function () {
@@ -66,7 +66,7 @@ describe("Hangman Game", function () {
     });
     it("_checkClickedLetters should return a boolean", function () {
       hangman.letters.push("I");
-      expect(typeof(hangman._checkIfLetter("N"))).toBe("boolean");
+      expect(typeof(hangman._scheckIfLetter("N"))).toBe("boolean");
     });
 
     it("_checkClickedLetters should return true", function () {
@@ -147,4 +147,4 @@ describe("Hangman Game", function () {
       expect(hangman._checkWinner()).toEqual(false);
     });
   });
-});
+ });
